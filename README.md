@@ -6,13 +6,15 @@ This is done by calling the Gemini API to generalize the given problem, then sen
 # Why should you care
 The goal of this project is to improve the learning of math students that are dependent on AI, because of how good it is at taking a problem and giving a straight up explanation. The problem with this, is that you forget how to apply a general formula, or other steps to a similar problem to your own, limiting the growth of your learning. That is where this project comes in, aiming to find generalized problems and solutions from the Math StackExchange, and recommend them based on the given problem.
 
-# Installation
+# Usage
+The site has been deployed at https://secure-spire-11894-8b91bdce8dd6.herokuapp.com/. Note that the APIs that are used are on the free tier, and if any issues come up I will try to resolve them ASAP.
+## Running locally
 ```bash
 git clone https://github.com/attilajam/stacksearch.git
 cd stacksearch
 python -m venv venv
 source venv/bin/activate 
-pip install fastapi uvicorn jinja2 python-multipart google requests python-dotenv
+pip install -r requirements.txt
 python main.py
 ```
 
