@@ -1,0 +1,54 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math StackExchange Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-square-root-variable"></i> Math StackExchange Search</h1>
+            <p>Find helpful answers to your math problems</p>
+        </header>
+        
+        <main>
+            <div class="search-container">
+                <form id="search-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="problem-input" 
+                            placeholder="Enter your math problem (e.g., 'How to solve dx/dt = 3x - 2?')" 
+                            required
+                        >
+                        <button type="submit" id="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i> Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+            </div>
+            
+            <div id="results-container">
+                <!-- Results will be populated here by JavaScript -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by FastAPI and Math StackExchange</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', path='/js/script.js') }}"></script>
+</body>
+</html>
