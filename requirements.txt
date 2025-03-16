@@ -2,6 +2,7 @@ fastapi
 uvicorn
 jinja2
 python-multipart
-google
+google-genai
 requests
 python-dotenv
+gunicorn
