@@ -20,5 +20,5 @@ python main.py
 - [ ] Deploy and host the project on a website
 - [ ] Swap the Google Custom Search API as it is too expensive
 - [ ] Improve the prompt to find better search engine prompts
-
+- [ ] Create a better frontend, allowing users to sign up, etc.
 Note: the files for the frontend was generated using AI, and doing minimal debugging of the JavaScript. I do not claim the front-end related files as my own work, I specialize in the backend. 
