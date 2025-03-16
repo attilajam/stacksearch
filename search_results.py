@@ -7,7 +7,20 @@ import json
 load_dotenv()
 API_KEY = os.environ.get("GOOGLE_SEARCH_API_KEY")
 link = "https://www.googleapis.com/customsearch/v1"
+link = "https://api.stackexchange.com/2.3/search?order=desc&sort=votes&intitle=parameter&site=math"
 def search_math_stackexchange(problem):
+    search_results = []
+    for i in get_prompt(problem):
+        link = f"https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q={i}&site=math"
+        response = requests.get(link).json()
+        for i in response["items"][:12]:
+            search_results.append({"title":i["title"], "link":i["link"]})
+
+    return search_results
+
+    
+
+def search_google_for_math_stackexchange(problem):
     links = []
     for i in get_prompt(problem):
         response = requests.get(f"{link}?q={i}&key={API_KEY}&cx=1721c743e83c24dd6")
